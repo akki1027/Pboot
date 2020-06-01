@@ -1,32 +1,30 @@
 <div class="container">
 	<div class="row">
-		<div class="input-group mb-3">
-		  <div class="input-group-prepend">
-		    <button class="btn btn-outline-secondary" type="button">Button</button>
-		  </div>
-		  <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="btn-group" role="group" aria-label="Basic example">
-		  <button type="button" class="btn btn-secondary">Left</button>
-		  <button type="button" class="btn btn-secondary">Middle</button>
-		  <button type="button" class="btn btn-secondary">Right</button>
-		</div>
-	</div>
-
-	<div class="row">
 		<nav aria-label="Page navigation example">
 		  <ul class="pagination">
-		    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+		    <li class="page-item"><a class="page-link" href="#">前へ</a></li>
 		    <li class="page-item"><a class="page-link" href="#">1</a></li>
 		    <li class="page-item"><a class="page-link" href="#">2</a></li>
 		    <li class="page-item"><a class="page-link" href="#">3</a></li>
-		    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+		    <li class="page-item"><a class="page-link" href="#">次へ</a></li>
 		  </ul>
 		</nav>
 	</div>
+<script>
+	$(function(){
+		$('.page-item').hover(
+			function(){
+				$(this).animate({
+				'font-size':'16px'
+			}, 300);
+		},
+			function(){
+				$(this).animate({
+				'font-size':'14px'
+			}, 300);
+		});
+	});
+</script>
 
 	<div class="row">
 		<form>
@@ -48,59 +46,6 @@
 	</div>
 
 	<div class="row">
-		<div class="input-group mb-3">
-		  <div class="input-group-prepend">
-		    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
-		    <div class="dropdown-menu">
-		      <a class="dropdown-item" href="#">Action</a>
-		      <a class="dropdown-item" href="#">Another action</a>
-		      <a class="dropdown-item" href="#">Something else here</a>
-		      <div role="separator" class="dropdown-divider"></div>
-		      <a class="dropdown-item" href="#">Separated link</a>
-		    </div>
-		  </div>
-		  <input type="text" class="form-control" aria-label="Text input with dropdown button">
-		</div>
-	</div>
-
-	<div class="row">
-		<ul class="list-group">
-		  <li class="list-group-item">Cras justo odio</li>
-		  <li class="list-group-item">Dapibus ac facilisis in</li>
-		  <li class="list-group-item">Morbi leo risus</li>
-		  <li class="list-group-item">Porta ac consectetur ac</li>
-		  <li class="list-group-item">Vestibulum at eros</li>
-		</ul>
-	</div>
-
-	<div class="row">
-		<ul class="list-group">
-		  <li class="list-group-item active">Cras justo odio</li>
-		  <li class="list-group-item">Dapibus ac facilisis in</li>
-		  <li class="list-group-item">Morbi leo risus</li>
-		  <li class="list-group-item">Porta ac consectetur ac</li>
-		  <li class="list-group-item">Vestibulum at eros</li>
-		</ul>
-	</div>
-
-	<div class="row">
-		<ul class="nav justify-content-end">
-		  <li class="nav-item">
-		    <a class="nav-link active" href="#">Active</a>
-		  </li>
-		  <li class="nav-item">
-		    <a class="nav-link" href="#">Link</a>
-		  </li>
-		  <li class="nav-item">
-		    <a class="nav-link" href="#">Link</a>
-		  </li>
-		  <li class="nav-item">
-		    <a class="nav-link disabled" href="#">Disabled</a>
-		  </li>
-		</ul>
-	</div>
-
-	<div class="row">
 		<div class="pos-f-t">
 		  <div class="collapse" id="navbarToggleExternalContent">
 		    <div class="bg-dark p-4">
@@ -115,10 +60,28 @@
 		  </nav>
 		</div>
 	</div>
+
+	<div class="row">
+		<ul class="list-group list-group-flush">
+			<li class="list-group-item">Cras justo odio</li>
+			<li class="list-group-item">Dapibus ac facilisis in</li>
+			<li class="list-group-item">Vestibulum at eros</li>
+		</ul>
+	</div>
+
+	<div class="row">
+		<div class="dropdown">
+			<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			Dropdown button
+			</button>
+			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+				<a class="dropdown-item" href="#">Action</a>
+				<a class="dropdown-item" href="#">Another action</a>
+				<a class="dropdown-item" href="#">Something else here</a>
+			</div>
+		</div>
+	</div>
 </div>
-
-
-
 
 
 <style>
